@@ -1,0 +1,13 @@
+title Single Page App
+Browser->Server: HTTP GET Request to .../spa 
+Server->Browser: Response Status 200 -> returns html page with css and js file
+Browser->Server: HTTP GET .../main.css
+Server->Browser: Response Status 200, returns css file
+Browser->Server: HTTP GET ../spa.js
+Server->Browser: Response Status 200, returns js file
+note right of Browser: Browser executes the JavaScript \n that now contains the logic to render notes \n and post new note. \n JS also initiates an HTTP Get request.
+Browser->Server: HTTP GET .../data.json
+Server->Browser: Response Status 200, returns json object
+note right of Browser: Browser completes the execution of JavaScript \n and renders the json as a list, containing new note "Test".
+
+

@@ -1,0 +1,19 @@
+title HTTP Post Request
+
+note right of Browser: User posts a text "Test"
+Browser->Server: HTTP Post Request to .../new_note with Form Data, note: "Test"
+note left of Server: Server handles the request and pushes "Test" to the json object
+Server->Browser: Response Status 302 Redirected (to .../notes)
+Browser->Server: HTTP GET Request to .../notes 
+Server->Browser: Response Status 200 -> returns html page from .../notes
+Browser->Server: HTTP GET .../main.css
+Server->Browser: Response Status 200, returns css file
+Browser->Server: HTTP GET ../main.js
+Server->Browser: Response Status 200, returns js file
+note right of Browser: Browser executes the JavaScript \n that contains HTTP Get request.
+Browser->Server: HTTP GET .../data.json
+Server->Browser: Response Status 200, returns json object
+note right of Browser: Browser completes the execution of JavaScript \n and renders the json as a list, containing new note "Test".
+
+
+

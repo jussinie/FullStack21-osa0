@@ -1,0 +1,6 @@
+title Single Page App, Post Request
+note right of Browser: We are already on the Notes page, \n see previous on how we got here.
+Browser->Server: HTTP POST Request to .../new_note_spa 
+Server->Browser: Response Status 201 Created, returns a json payload \n { content: "test", date: "YYYY-MM-DD:etc" }
+note right of Browser: Browser executes the JavaScript \n it fetched from the server in the previous phase \n and renders new note along with old ones
+
